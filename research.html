@@ -46,7 +46,7 @@
         }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-gray-100 min-h-screen transition-colors duration-300">
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-gray-100 min-h-screen transition-colors duration-300 overflow-x-hidden md:overflow-x-visible">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 border-b-2 border-black dark:border-gray-600 bg-background-light dark:bg-background-dark">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,10 +67,32 @@
                     <button id="theme-toggle" class="p-2 border-2 border-black dark:border-gray-500 rounded bg-white dark:bg-paper-dark shadow-retro-sm hover:translate-y-0.5 hover:shadow-none transition-all">
                         <span class="material-icons text-sm">light_mode</span>
                     </button>
+                                        <!-- Mobile hamburger -->
+                                        <button id="mobile-menu-button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false" class="block md:hidden p-2 border-2 border-black dark:border-gray-500 rounded bg-white dark:bg-paper-dark shadow-retro-sm hover:translate-y-0.5 hover:shadow-none transition-all">
+                                            <span class="material-icons text-black dark:text-white text-xl">menu</span>
+                                        </button>
                 </div>
             </div>
         </div>
     </nav>
+        <!-- Mobile menu panel -->
+        <div id="mobile-menu" class="md:hidden hidden fixed top-16 left-0 w-full z-40 bg-background-light dark:bg-background-dark border-b-2 border-black dark:border-gray-600 shadow-retro-sm">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 font-mono text-sm font-bold space-y-2">
+                <a class="block px-2 py-2 text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="index.html">HOME</a>
+                <a class="block px-2 py-2 text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="about.html">ABOUT</a>
+                <a class="block px-2 py-2 text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="experience.html">EXPERIENCE</a>
+                <a class="block px-2 py-2 text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="projects.html">PROJECTS</a>
+                <a class="block px-2 py-2 text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="research.html">RESEARCH</a>
+                <a class="block px-2 py-2 text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="contact.html">CONTACT</a>
+            </div>
+            <div class="px-4 sm:px-6 lg:px-8 pb-3 opacity-40">
+                <div class="flex gap-2">
+                    <div class="w-2 h-2 bg-black dark:bg-white"></div>
+                    <div class="w-2 h-2 bg-black dark:bg-white"></div>
+                    <div class="w-2 h-2 bg-black dark:bg-white"></div>
+                </div>
+            </div>
+        </div>
 
     <!-- Main Content -->
     <main class="pt-24 pb-20 relative">
@@ -320,5 +342,33 @@
     </main>
 
     <script src="theme.js"></script>
+        <script>
+            // Mobile menu toggle
+            (function(){
+                const btn = document.getElementById('mobile-menu-button');
+                const panel = document.getElementById('mobile-menu');
+                if(!btn || !panel) return;
+                const icon = btn.querySelector('.material-icons');
+                function setOpen(open){
+                    if(open){
+                        panel.classList.remove('hidden');
+                        btn.setAttribute('aria-expanded','true');
+                        if(icon) icon.textContent = 'close';
+                    } else {
+                        panel.classList.add('hidden');
+                        btn.setAttribute('aria-expanded','false');
+                        if(icon) icon.textContent = 'menu';
+                    }
+                }
+                let isOpen = false;
+                btn.addEventListener('click', () => {
+                    isOpen = !isOpen;
+                    setOpen(isOpen);
+                });
+                panel.addEventListener('click', (e) => {
+                    if(e.target.tagName === 'A') { isOpen = false; setOpen(false); }
+                });
+            })();
+        </script>
 </body>
 </html>
