@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nafiul Islam - Software Projects</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#00ADD8", // Cyan-blue
+                        secondary: "#FF9900", // Orange
+                        accent: "#5C2D91", // Deep Purple
+                        "background-light": "#F3F0E6", 
+                        "background-dark": "#1A1A2E", 
+                        "paper-light": "#FFFFFF",
+                        "paper-dark": "#252540",
+                    },
+                    fontFamily: {
+                        display: ["'Space Grotesk'", "sans-serif"],
+                        mono: ["'JetBrains Mono'", "monospace"],
+                    },
+                    boxShadow: {
+                        'retro': '4px 4px 0px 0px #000000',
+                        'retro-sm': '2px 2px 0px 0px #000000',
+                        'retro-hover': '6px 6px 0px 0px #000000',
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, #e5e5e5 1px, transparent 1px), linear-gradient(to bottom, #e5e5e5 1px, transparent 1px)",
+                        'grid-pattern-dark': "linear-gradient(to right, #33334d 1px, transparent 1px), linear-gradient(to bottom, #33334d 1px, transparent 1px)",
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        .grid-bg {
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-gray-100 min-h-screen transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b-2 border-black dark:border-gray-600 bg-background-light dark:bg-background-dark">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <!-- <div class="w-8 h-8 bg-accent flex items-center justify-center border-2 border-black text-white font-bold shadow-retro-sm">N</div> -->
+                    <a href="index.html" aria-label="Go to Home" class="font-mono font-bold text-xl tracking-tighter hover:text-primary transition-colors">NAFIUL ISLAM</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="hidden md:flex space-x-8 font-mono text-sm font-bold">
+                        <a class="text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="index.html">HOME</a>
+                        <a class="text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="about.html">ABOUT</a>
+                        <a class="text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="experience.html">EXPERIENCE</a>
+                        <a class="text-primary underline decoration-4 decoration-secondary underline-offset-4" href="projects.html">PROJECTS</a>
+                        <a class="text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="research.html">RESEARCH</a>
+                        <a class="text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="contact.html">CONTACT</a>
+                    </div>
+                    <button id="theme-toggle" class="p-2 border-2 border-black dark:border-gray-500 rounded bg-white dark:bg-paper-dark shadow-retro-sm hover:translate-y-0.5 hover:shadow-none transition-all">
+                        <span class="material-icons text-sm">light_mode</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-20 relative">
+        <div class="absolute inset-0 z-0 opacity-40 bg-grid-pattern dark:bg-grid-pattern-dark grid-bg pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header -->
+            <div class="mb-16 flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
+                <div>
+                    <div class="inline-block bg-primary text-white font-mono text-sm px-3 py-1 mb-2 border-2 border-black shadow-retro-sm rotate-1">
+                        &lt;CODE_PORTFOLIO&gt;
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-none">
+                        SOFTWARE <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">PROJECTS</span>
+                    </h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="bg-white dark:bg-paper-dark p-4 border-2 border-black dark:border-gray-500 shadow-retro rotate-2 max-w-xs">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="material-icons text-secondary">folder</span>
+                            <span class="font-mono font-bold text-sm">projects.log</span>
+                        </div>
+                        <p class="font-mono text-xs text-gray-600 dark:text-gray-400">
+                            > Building solutions...<br>
+                            > ASP.NET & Django Stack<br>
+                            > ML & Data Analysis
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1: Tenanto -->
+                <div class="group bg-white dark:bg-paper-dark border-2 border-black dark:border-gray-500 shadow-retro hover:shadow-retro-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-accent border-2 border-black flex items-center justify-center shadow-retro-sm">
+                                    <span class="material-icons text-white text-2xl">home</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold font-display">Tenanto</h3>
+                                    <p class="text-sm text-gray-500 font-mono">Rent Management System</p>
+                                </div>
+                            </div>
+                            <span class="bg-primary text-white px-2 py-1 text-xs font-mono font-bold border border-black">WEB APP</span>
+                        </div>
+                        
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+                            A lightweight web application for landlords to efficiently manage tenants and track monthly rent records. Built with modern ASP.NET Core architecture.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 border border-black text-xs font-bold">ASP.NET Core MVC</span>
+                            <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 border border-black text-xs font-bold">C#</span>
+                            <span class="px-2 py-1 bg-green-100 dark:bg-green-900 border border-black text-xs font-bold">SQL Server</span>
+                            <span class="px-2 py-1 bg-orange-100 dark:bg-orange-900 border border-black text-xs font-bold">EF Core</span>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <a href="https://github.com/islamnafi/tenanto-a-rent-management-app" target="_blank" 
+                               class="flex-1 bg-black dark:bg-white text-white dark:text-black px-4 py-2 border-2 border-black text-center font-bold text-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-retro-sm transition-all">
+                                <span class="material-icons text-sm mr-1">code</span>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Krishibandhon -->
+                <div class="group bg-white dark:bg-paper-dark border-2 border-black dark:border-gray-500 shadow-retro hover:shadow-retro-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-secondary border-2 border-black flex items-center justify-center shadow-retro-sm">
+                                    <span class="material-icons text-white text-2xl">agriculture</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold font-display">Krishibandhon</h3>
+                                    <p class="text-sm text-gray-500 font-mono">Farmer Services Platform</p>
+                                </div>
+                            </div>
+                            <span class="bg-secondary text-white px-2 py-1 text-xs font-mono font-bold border border-black">FINTECH</span>
+                        </div>
+                        
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+                            A full-stack Fintech platform providing secure grant and insurance services with efficient CRUD operations for farmers and finance organizations in Bangladesh.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-100 dark:bg-green-900 border border-black text-xs font-bold">Django</span>
+                            <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 border border-black text-xs font-bold">MySQL</span>
+                            <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 border border-black text-xs font-bold">Bootstrap</span>
+                            <span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 border border-black text-xs font-bold">Python</span>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <a href="https://github.com/islamnafi/krishibandhon-integrated-platform-for-farmer-financial-services" target="_blank" 
+                               class="flex-1 bg-black dark:bg-white text-white dark:text-black px-4 py-2 border-2 border-black text-center font-bold text-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-retro-sm transition-all">
+                                <span class="material-icons text-sm mr-1">code</span>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: ML Diabetes Prediction -->
+                <div class="group bg-white dark:bg-paper-dark border-2 border-black dark:border-gray-500 shadow-retro hover:shadow-retro-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-primary border-2 border-black flex items-center justify-center shadow-retro-sm">
+                                    <span class="material-icons text-white text-2xl">psychology</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold font-display">ML Diabetes Prediction</h3>
+                                    <p class="text-sm text-gray-500 font-mono">Machine Learning Analysis</p>
+                                </div>
+                            </div>
+                            <span class="bg-primary text-white px-2 py-1 text-xs font-mono font-bold border border-black">ML</span>
+                        </div>
+                        
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+                            Comparative analysis of four machine learning models (including Random Forest and XGBoost) using pipelines to predict diabetes onset based on diagnostic features.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 border border-black text-xs font-bold">Scikit-learn</span>
+                            <span class="px-2 py-1 bg-orange-100 dark:bg-orange-900 border border-black text-xs font-bold">XGBoost</span>
+                            <span class="px-2 py-1 bg-green-100 dark:bg-green-900 border border-black text-xs font-bold">Pandas</span>
+                            <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 border border-black text-xs font-bold">Python</span>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <a href="https://github.com/islamnafi/comparative-ML-analysis-for-diabetes-prediction" target="_blank" 
+                               class="flex-1 bg-black dark:bg-white text-white dark:text-black px-4 py-2 border-2 border-black text-center font-bold text-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-retro-sm transition-all">
+                                <span class="material-icons text-sm mr-1">code</span>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Customer Segmentation -->
+                <div class="group bg-white dark:bg-paper-dark border-2 border-black dark:border-gray-500 shadow-retro hover:shadow-retro-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-accent border-2 border-black flex items-center justify-center shadow-retro-sm">
+                                    <span class="material-icons text-white text-2xl">analytics</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold font-display">Customer Segmentation</h3>
+                                    <p class="text-sm text-gray-500 font-mono">Data Analysis Project</p>
+                                </div>
+                            </div>
+                            <span class="bg-accent text-white px-2 py-1 text-xs font-mono font-bold border border-black">DATA</span>
+                        </div>
+                        
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+                            In-depth sales data analysis to identify key demographics and sales trends of target audiences. Comprehensive data visualization and insights generation.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 border border-black text-xs font-bold">NumPy</span>
+                            <span class="px-2 py-1 bg-green-100 dark:bg-green-900 border border-black text-xs font-bold">Pandas</span>
+                            <span class="px-2 py-1 bg-orange-100 dark:bg-orange-900 border border-black text-xs font-bold">Seaborn</span>
+                            <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 border border-black text-xs font-bold">Matplotlib</span>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <a href="https://github.com/islamnafi/customer-segmentation-and-sales-trends-analysis" target="_blank" 
+                               class="flex-1 bg-black dark:bg-white text-white dark:text-black px-4 py-2 border-2 border-black text-center font-bold text-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-retro-sm transition-all">
+                                <span class="material-icons text-sm mr-1">code</span>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="mt-20 text-center">
+                <div class="bg-white dark:bg-paper-dark border-2 border-black dark:border-gray-500 p-8 shadow-retro inline-block">
+                    <h2 class="text-2xl font-bold font-display mb-4">Interested in Collaboration?</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 font-mono text-sm">
+                        Let's build something amazing together. Check out more of my work or get in touch.
+                    </p>
+                    <div class="flex gap-4 justify-center">
+                        <a href="https://github.com/islamnafi" target="_blank" 
+                           class="bg-black dark:bg-white text-white dark:text-black px-6 py-3 border-2 border-black font-bold hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-retro-sm transition-all">
+                            <span class="material-icons text-sm mr-2">code</span>
+                            GitHub Profile
+                        </a>
+                        <a href="contact.html" 
+                           class="bg-primary text-white px-6 py-3 border-2 border-black font-bold hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-retro-sm transition-all">
+                            <span class="material-icons text-sm mr-2">mail</span>
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-24 border-t-2 border-black dark:border-gray-600 pt-8 flex justify-between items-center opacity-70">
+                <div class="flex gap-4">
+                    <div class="w-4 h-4 rounded-full bg-red-500 border border-black"></div>
+                    <div class="w-4 h-4 rounded-full bg-yellow-500 border border-black"></div>
+                    <div class="w-4 h-4 rounded-full bg-green-500 border border-black"></div>
+                </div>
+                <div class="font-mono text-xs text-gray-500">
+                    © 2024 NAFIUL ISLAM // PORTFOLIO.BUILD
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nafiul Islam - Research & Publications</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#00ADD8", // Cyan-blue
+                        secondary: "#FF9900", // Orange
+                        accent: "#5C2D91", // Deep Purple
+                        "background-light": "#F3F0E6", 
+                        "background-dark": "#1A1A2E", 
+                        "paper-light": "#FFFFFF",
+                        "paper-dark": "#252540",
+                    },
+                    fontFamily: {
+                        display: ["'Space Grotesk'", "sans-serif"],
+                        mono: ["'JetBrains Mono'", "monospace"],
+                    },
+                    boxShadow: {
+                        'retro': '4px 4px 0px 0px #000000',
+                        'retro-sm': '2px 2px 0px 0px #000000',
+                        'retro-hover': '6px 6px 0px 0px #000000',
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, #e5e5e5 1px, transparent 1px), linear-gradient(to bottom, #e5e5e5 1px, transparent 1px)",
+                        'grid-pattern-dark': "linear-gradient(to right, #33334d 1px, transparent 1px), linear-gradient(to bottom, #33334d 1px, transparent 1px)",
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        .grid-bg {
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-gray-100 min-h-screen transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b-2 border-black dark:border-gray-600 bg-background-light dark:bg-background-dark">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <!-- <div class="w-8 h-8 bg-accent flex items-center justify-center border-2 border-black text-white font-bold shadow-retro-sm">N</div> -->
+                    <a href="index.html" aria-label="Go to Home" class="font-mono font-bold text-xl tracking-tighter hover:text-primary transition-colors">NAFIUL ISLAM</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="hidden md:flex space-x-8 font-mono text-sm font-bold">
+                        <a class="text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="index.html">HOME</a>
+                        <a class="text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="about.html">ABOUT</a>
+                        <a class="text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="experience.html">EXPERIENCE</a>
+                        <a class="text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="projects.html">PROJECTS</a>
+                        <a class="text-primary underline decoration-4 decoration-secondary underline-offset-4" href="research.html">RESEARCH</a>
+                        <a class="text-gray-900 dark:text-gray-200 hover:text-primary transition-colors" href="contact.html">CONTACT</a>
+                    </div>
+                    <button id="theme-toggle" class="p-2 border-2 border-black dark:border-gray-500 rounded bg-white dark:bg-paper-dark shadow-retro-sm hover:translate-y-0.5 hover:shadow-none transition-all">
+                        <span class="material-icons text-sm">light_mode</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-20 relative">
+        <div class="absolute inset-0 z-0 opacity-40 bg-grid-pattern dark:bg-grid-pattern-dark grid-bg pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header -->
+            <div class="mb-16 flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
+                <div>
+                    <div class="inline-block bg-primary text-white font-mono text-sm px-3 py-1 mb-2 border-2 border-black shadow-retro-sm rotate-1">
+                        &lt;ACADEMIC_OUTPUT&gt;
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-none">
+                        RESEARCH <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">PUBLICATIONS</span>
+                    </h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="bg-white dark:bg-paper-dark p-4 border-2 border-black dark:border-gray-500 shadow-retro rotate-2 max-w-xs">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="material-icons text-secondary">school</span>
+                            <span class="font-mono font-bold text-sm">research.log</span>
+                        </div>
+                        <p class="font-mono text-xs text-gray-600 dark:text-gray-400">
+                            > Loading publications...<br>
+                            > 3 Papers Published<br>
+                            > Engineering Focus
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Publications -->
+            <div class="space-y-12">
+                <!-- Publication 1: Most Recent -->
+                <article class="bg-white dark:bg-paper-dark border-2 border-black dark:border-gray-500 shadow-retro hover:shadow-retro-hover transition-all duration-300 group">
+                    <div class="p-8">
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 bg-accent border-2 border-black flex items-center justify-center shadow-retro-sm">
+                                    <span class="material-icons text-white text-2xl">science</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <span class="bg-accent text-white px-3 py-1 text-xs font-mono font-bold border border-black">ELSEVIER</span>
+                                        <span class="text-sm text-gray-500 font-mono">April 2025</span>
+                                    </div>
+                                    <h2 class="text-2xl font-bold font-display leading-tight">
+                                        Design and Development of Motorcycle Helmet Using Carbon Fiber Reinforced Epoxy Resin Hybrid Composite
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block">
+                                <div class="w-12 h-12 bg-secondary border-2 border-black flex items-center justify-center shadow-retro-sm transform rotate-12">
+                                    <span class="material-icons text-white">new_releases</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm mb-4">
+                                Advanced materials engineering research focusing on the design and development of motorcycle helmets using carbon fiber reinforced epoxy resin hybrid composites. This study investigates the mechanical properties, impact resistance, and manufacturing feasibility of novel composite materials for protective equipment applications.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 border border-black text-xs font-bold">Materials Engineering</span>
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 border border-black text-xs font-bold">Composite Materials</span>
+                                <span class="px-2 py-1 bg-green-100 dark:bg-green-900 border border-black text-xs font-bold">Safety Equipment</span>
+                                <span class="px-2 py-1 bg-orange-100 dark:bg-orange-900 border border-black text-xs font-bold">Carbon Fiber</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <a href="https://www.sciencedirect.com/science/article/pii/S2590048X25000615" target="_blank" 
+                               class="bg-black dark:bg-white text-white dark:text-black px-6 py-2 border-2 border-black font-bold text-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-retro-sm transition-all">
+                                <span class="material-icons text-sm mr-1">article</span>
+                                Read Paper
+                            </a>
+                            <div class="bg-gray-100 dark:bg-gray-700 px-4 py-2 border-2 border-black flex items-center">
+                                <span class="text-xs font-mono">Results in Materials, Elsevier 26, 100716</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Publication 2 -->
+                <article class="bg-white dark:bg-paper-dark border-2 border-black dark:border-gray-500 shadow-retro hover:shadow-retro-hover transition-all duration-300 group">
+                    <div class="p-8">
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 bg-primary border-2 border-black flex items-center justify-center shadow-retro-sm">
+                                    <span class="material-icons text-white text-2xl">thermostat</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <span class="bg-primary text-white px-3 py-1 text-xs font-mono font-bold border border-black">IOP SCIENCE</span>
+                                        <span class="text-sm text-gray-500 font-mono">December 2022</span>
+                                    </div>
+                                    <h2 class="text-2xl font-bold font-display leading-tight">
+                                        Laminar Convective Heat Transfer Across a Circular Pipe by Using MWCNT + Fe₃O₄ Hybrid Nanofluid
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm mb-4">
+                                Investigation of heat transfer enhancement using hybrid nanofluids consisting of multi-walled carbon nanotubes (MWCNT) and iron oxide (Fe₃O₄) nanoparticles in circular pipe flow. This research contributes to the understanding of thermal performance optimization in heat exchangers and thermal management systems.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-red-100 dark:bg-red-900 border border-black text-xs font-bold">Heat Transfer</span>
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 border border-black text-xs font-bold">Nanofluids</span>
+                                <span class="px-2 py-1 bg-green-100 dark:bg-green-900 border border-black text-xs font-bold">Thermal Engineering</span>
+                                <span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 border border-black text-xs font-bold">CNT</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <a href="https://iopscience.iop.org/article/10.1088/1757-899X/1305/1/012005" target="_blank" 
+                               class="bg-black dark:bg-white text-white dark:text-black px-6 py-2 border-2 border-black font-bold text-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-retro-sm transition-all">
+                                <span class="material-icons text-sm mr-1">article</span>
+                                Read Paper
+                            </a>
+                            <div class="bg-gray-100 dark:bg-gray-700 px-4 py-2 border-2 border-black flex items-center">
+                                <span class="text-xs font-mono">IOP Conference Series: Materials Science and Engineering 1305 (1), 012005</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Publication 3 -->
+                <article class="bg-white dark:bg-paper-dark border-2 border-black dark:border-gray-500 shadow-retro hover:shadow-retro-hover transition-all duration-300 group">
+                    <div class="p-8">
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 bg-secondary border-2 border-black flex items-center justify-center shadow-retro-sm">
+                                    <span class="material-icons text-white text-2xl">gps_fixed</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <span class="bg-secondary text-white px-3 py-1 text-xs font-mono font-bold border border-black">ICACE 2020</span>
+                                        <span class="text-sm text-gray-500 font-mono">December 2020</span>
+                                    </div>
+                                    <h2 class="text-2xl font-bold font-display leading-tight">
+                                        Using Real-Time GPS Tracking Traffic System for Healthcare Vehicles
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm mb-4">
+                                Development of a real-time GPS tracking system specifically designed for healthcare vehicles to optimize emergency response times and improve patient care delivery. This research presents a comprehensive solution for traffic management and route optimization in emergency medical services.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 border border-black text-xs font-bold">GPS Tracking</span>
+                                <span class="px-2 py-1 bg-red-100 dark:bg-red-900 border border-black text-xs font-bold">Healthcare Systems</span>
+                                <span class="px-2 py-1 bg-green-100 dark:bg-green-900 border border-black text-xs font-bold">Traffic Management</span>
+                                <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 border border-black text-xs font-bold">Emergency Services</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <a href="https://www.researchgate.net/publication/357057117_USING_REAL-TIME_GPS_TRACKING_TRAFFIC_SYSTEM_FOR_HEALTHCARE_VEHICLES" target="_blank" 
+                               class="bg-black dark:bg-white text-white dark:text-black px-6 py-2 border-2 border-black font-bold text-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-retro-sm transition-all">
+                                <span class="material-icons text-sm mr-1">article</span>
+                                Read Paper
+                            </a>
+                            <div class="bg-gray-100 dark:bg-gray-700 px-4 py-2 border-2 border-black flex items-center">
+                                <span class="text-xs font-mono">5th International Conference on Advances in Civil Engineering 2020 (ICACE 2020)</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Research Interests & CTA -->
+            <div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Research Interests -->
+                <div class="bg-white dark:bg-paper-dark border-2 border-black dark:border-gray-500 p-8 shadow-retro">
+                    <h3 class="text-2xl font-bold font-display mb-6 flex items-center gap-3">
+                        <span class="material-icons text-primary">lightbulb</span>
+                        Research Interests
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></span>
+                            <div>
+                                <span class="font-bold">Deep Learning Architectures</span>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Efficient CNN, RNN, and Transformer design for vision and NLP.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                            <div>
+                                <span class="font-bold">Predictive Modeling</span>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Interpretable forecasting and classification models.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></span>
+                            <div>
+                                <span class="font-bold">Distributed Systems</span>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Scalable, fault-tolerant distributed architectures.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Academic Profile -->
+                <div class="bg-accent text-white border-2 border-black p-8 shadow-retro">
+                    <h3 class="text-2xl font-bold font-display mb-6 flex items-center gap-3">
+                        <span class="material-icons">account_circle</span>
+                        Academic Profile
+                    </h3>
+                    <p class="mb-6 text-sm leading-relaxed">
+                        Currently pursuing MSc in Computer Science & Engineering while maintaining active research involvement in materials engineering and smart systems development.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://tinyurl.com/4sxz6k5j" target="_blank" 
+                           class="bg-white text-black px-6 py-2 border-2 border-black font-bold text-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-retro-sm transition-all">
+                            <span class="material-icons text-sm mr-1">school</span>
+                            Google Scholar
+                        </a>
+                        <a href="contact.html" 
+                           class="bg-secondary text-white px-6 py-2 border-2 border-black font-bold text-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-retro-sm transition-all">
+                            <span class="material-icons text-sm mr-1">mail</span>
+                            Collaborate
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-24 border-t-2 border-black dark:border-gray-600 pt-8 flex justify-between items-center opacity-70">
+                <div class="flex gap-4">
+                    <div class="w-4 h-4 rounded-full bg-red-500 border border-black"></div>
+                    <div class="w-4 h-4 rounded-full bg-yellow-500 border border-black"></div>
+                    <div class="w-4 h-4 rounded-full bg-green-500 border border-black"></div>
+                </div>
+                <div class="font-mono text-xs text-gray-500">
+                    © 2024 NAFIUL ISLAM // RESEARCH.BUILD
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="theme.js"></script>
+</body>
+</html>
