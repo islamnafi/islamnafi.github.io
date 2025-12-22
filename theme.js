@@ -26,7 +26,7 @@
     try {
       const saved = localStorage.getItem(storageKey);
       if(saved === 'dark' || saved === 'light') setTheme(saved);
-      else setTheme(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      else setTheme('light');
     } catch { setTheme('light'); }
   })();
 
@@ -49,7 +49,7 @@
     mq.addEventListener?.('change', (e) => {
       try {
         const saved = localStorage.getItem(storageKey);
-        if(saved !== 'dark' && saved !== 'light') setTheme(e.matches ? 'dark' : 'light');
+        if(saved === 'dark' || saved === 'light') setTheme(saved);
       } catch {}
     });
   }
