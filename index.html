@@ -46,6 +46,40 @@
         .grid-bg {
             background-size: 40px 40px;
         }
+        /* 3D flip helpers */
+        .flip-3d {
+            transform-style: preserve-3d;
+            transform-origin: center;
+            backface-visibility: hidden;
+        }
+        @keyframes coin-flip {
+            0% { transform: perspective(800px) rotateX(0deg); }
+            40% { transform: perspective(800px) rotateX(160deg); }
+            60% { transform: perspective(800px) rotateX(160deg); }
+            100% { transform: perspective(800px) rotateX(0deg); }
+        }
+        .animate-coin-flip {
+            animation: coin-flip 1.1s ease-in-out forwards;
+        }
+        /* Typewriter caret */
+        .typewriter {
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            /* reserve room so last glyph isn't clipped */
+            padding-right: 0.25rem; /* 4px */
+        }
+        .typewriter-caret {
+            border-right: 2px solid currentColor;
+            animation: blink-caret .8s step-end infinite;
+            /* extra space for caret width */
+            padding-right: 2px;
+        }
+        .done { border-right-color: transparent; overflow: visible; }
+        @keyframes blink-caret {
+            from, to { border-right-color: transparent; }
+            50% { border-right-color: currentColor; }
+        }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-gray-100 min-h-screen transition-colors duration-300 overflow-x-hidden md:overflow-x-visible">
@@ -125,6 +159,43 @@
         });
     })();
 </script>
+<script>
+    (function(){
+        document.addEventListener('DOMContentLoaded', function(){
+            // Headline coin flip: run once per browser (localStorage flag)
+            const headline = document.getElementById('headline-flip');
+            const flipFlag = 'headlineFlipDone';
+            if(headline){
+                headline.classList.add('flip-3d');
+                if(!localStorage.getItem(flipFlag)){
+                    headline.classList.add('animate-coin-flip');
+                    headline.addEventListener('animationend', () => {
+                        try { localStorage.setItem(flipFlag, '1'); } catch(_){ /* ignore */ }
+                    }, { once: true });
+                }
+            }
+
+            // Typewriter for =CODE
+            const codeSpan = document.getElementById('code-typewriter');
+            if(codeSpan){
+                const full = (codeSpan.getAttribute('data-text') || codeSpan.textContent || '').trim();
+                codeSpan.textContent = '';
+                codeSpan.classList.add('typewriter','typewriter-caret');
+                let i = 0;
+                const delay = 120; // ms per character
+                const timer = setInterval(() => {
+                    codeSpan.textContent = full.slice(0, i + 1);
+                    i++;
+                    if(i >= full.length){
+                        clearInterval(timer);
+                        codeSpan.classList.remove('typewriter-caret');
+                        codeSpan.classList.add('done');
+                    }
+                }, delay);
+            }
+        });
+    })();
+</script>
 <main class="pt-24 pb-20 relative">
 <div class="absolute inset-0 z-0 opacity-40 bg-grid-pattern dark:bg-grid-pattern-dark grid-bg pointer-events-none"></div>
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -140,13 +211,13 @@
 </div>
 <div class="space-y-4">
 <div class="inline-block bg-primary border-4 border-black dark:border-white p-4 shadow-retro dark:shadow-retro-dark transform -rotate-1">
-<h1 class="text-4xl md:text-6xl font-display font-black text-white uppercase leading-none">
+<h1 id="headline-flip" class="text-4xl md:text-6xl font-display font-black text-white uppercase leading-none">
                                 Building Systems
                             </h1>
 </div>
 <div class="flex flex-wrap items-center gap-4 text-4xl md:text-6xl font-display font-black uppercase leading-none">
 <span>with</span>
-<span class="text-primary italic transform -skew-x-12 underline decoration-4 decoration-black dark:decoration-white">=CODE</span>
+<span id="code-typewriter" data-text="=CODE" class="text-primary italic transform -skew-x-12 underline decoration-4 decoration-black dark:decoration-white"></span>
 </div>
 <div class="flex items-center gap-4">
 <span class="text-4xl md:text-6xl font-display font-black uppercase">&amp;</span>
@@ -157,7 +228,7 @@
 </div>
 </div>
 <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-lg bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm p-4 border-l-4 border-primary">
-                        Hello, I'm <span class="font-bold text-primary">Nafiul Islam</span>, a Software Engineer and Master's student passionate about software development and AI, driven to build scalable solutions with real impact.
+                        Hello, I'm <span class="font-bold text-primary">Nafiul Islam</span>, a Software Engineer and Master's student passionate about software development and AI, driven to build scalable solutions with real impact. 
                     </p>
 <div class="flex flex-wrap gap-4">
 <div class="bg-white dark:bg-gray-800 border-2 border-black dark:border-white px-4 py-3 flex items-center gap-2 shadow-retro dark:shadow-retro-dark">
